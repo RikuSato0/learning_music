@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/favico.png" type="image/x-icon" />
+    <link rel="icon" sizes="192x192" href="assets/icon.png" />
+    <title>Music Learning Website</title>
+  </head>
+  <body>
+    <section class="home">
+      <div class="description">
+        <h1 class="title">
+          <span class="gradient-text">Learn Music</span> with Game
+        </h1>
+        <p class="paragraph">
+          Discover a whole new way to learn music with our interactive,
+          game-based platform — where every lesson feels like play, and students
+          of all ages can build real musical skills while having fun, staying
+          motivated, and progressing at their own pace!
+        </p>
+        <form id="form" autocomplete="off">
+          <input
+            type="email"
+            id="email-id"
+            name="email_address"
+            aria-label="email adress"
+            placeholder=""
+            required
+            oninput="checkEmpty()"
+          />
+          <button type="submit" class="btn" aria-label="submit">
+            <span>Subscribe</span>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </button>
+        </form>
+      </div>
+
+      <div class="users-color-container">
+        <span class="item" style="--i: 1"></span>
+        <img
+          class="item"
+          src="assets/image/landing/orange-person.jpg"
+          style="--i: 2"
+          alt=""
+        />
+        <span class="item" style="--i: 3"></span>
+        <img
+          class="item"
+          src="assets/image/landing/purple-person.jpg"
+          style="--i: 4"
+          alt=""
+        />
+
+        <img
+          class="item"
+          src="assets/image/landing/yellow-person.jpg"
+          style="--i: 10"
+          alt=""
+        />
+        <span class="item" style="--i: 11"></span>
+        <img
+          class="item"
+          src="assets/image/landing/pink-person.jpg"
+          style="--i: 12"
+          alt=""
+        />
+        <span class="item" style="--i: 5"></span>
+
+        <span class="item" style="--i: 9"></span>
+        <img
+          class="item"
+          src="assets/image/landing/green-person.jpg"
+          style="--i: 8"
+          alt=""
+        />
+        <span class="item" style="--i: 7"></span>
+        <img
+          class="item"
+          src="assets/image/landing/blue-person.jpg"
+          style="--i: 6"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <section class="card-container">
+      <div class="slider">
+        <div class="card" data-tilt>
+          <div class="content">
+            <img src="assets/image/landing/mentorship-1.jpg" alt="" />
+            <h1>Drag-and-Drop Dynamics</h1>
+            <p>
+              You can select from 6 different dynamic options and drag up to 4
+              dynamics into 4 separate boxes. The character play a steady beat
+              using both hands.
+            </p>
+            <button class="btn btn-grad" onclick="location.href='/dynamics'">
+              <span href="/dynamics">Let's go</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="content">
+            <img src="assets/image/landing/mentorship-2.jpg" alt="" />
+            <h1>Metronome</h1>
+            <p>Coming Soon</p>
+            <button class="btn btn-grad" onclick="location.href='/metronome'">
+              <span>Let's go</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="content">
+            <img src="assets/image/landing/mentorship-3.jpg" alt="" />
+            <h1>Song Maker</h1>
+            <p>Coming Soon</p>
+            <button class="btn btn-grad" onclick="location.href='/composite'">
+              <span>Let's go</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="content">
+            <img src="assets/image/landing/mentorship-4.jpg" alt="" />
+            <h1>Coming Soon</h1>
+            <p>Coming Soon</p>
+            <button class="btn btn-grad">
+              <span>Let's go</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="content">
+            <img src="assets/image/landing/mentorship-5.jpg" alt="" />
+            <h1>Coming Soon</h1>
+            <p>Coming Soon</p>
+            <button class="btn btn-grad">
+              <span>Let's go</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="content">
+            <img src="assets/image/landing/mentorship-6.jpg" alt="" />
+            <h1>Confidence & Self-Esteem</h1>
+            <p>
+              A mentor is like a supportive coach, boosting your confidence and
+              self-esteem. Their encouragement can help you believe in your
+              potential and take on challenges with vigor.
+            </p>
+            <button class="btn btn-grad">
+              <span>Let's go</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <ul class="control" id="custom-control">
+        <li>
+          <ion-icon name="caret-back-outline"></ion-icon>
+        </li>
+        <li>
+          <ion-icon name="caret-forward-outline"></ion-icon>
+        </li>
+      </ul>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/vanilla-tilt.js"></script>
+  </body>
+</html>
