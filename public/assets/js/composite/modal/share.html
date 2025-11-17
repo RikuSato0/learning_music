@@ -1,0 +1,30 @@
+<div class=button id=cancel><img src=/images/icon-x.svg></div>
+<div class=saved-circle>
+    <svg class=circular-loader viewBox="0 0 50 50">
+        <circle class=loader-path cx=25 cy=25 r=20 fill=none stroke-width=3 />
+    </svg>
+</div>
+<div class="expandable modal-content" id=share-modal>
+    <div id=share-saved>
+        <div class=expandable-inner>
+            <span class=saved-text>Your song is saved at this link:</span>
+            <input class=short-url type=text disabled=disabled readonly=readonly />
+            <a class=button id=copy-link>Copy Link</a>
+            <div class=medium-button id=share-facebook></div>
+            <div class=medium-button id=share-twitter></div>
+            <div class=share-footer>
+                <div class="button switch-state" id=toggle-share-embed>Embed Code <span class=caret></span></div>
+                <div id=download-midi class=button>Download Midi</div>
+                <div id=download-wav class=button>Download Wav</div>
+            </div>
+            <div id=share-embed>
+                <textarea readonly=readonly class=iframe-code>
+                    <iframe width=560 height=315 src=https://musiclab.chromeexperiments.com/song/ frameborder=0 allowfullscreen></iframe>
+                </textarea>
+                <div class=share-center>
+                    <a id=copy-iframe>Copy code </a> to embed your song on a web page.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
