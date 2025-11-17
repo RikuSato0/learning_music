@@ -1,0 +1,26 @@
+$lightBlue: #57c1f9;
+$blue: #16a8f0;
+$red : "red";
+$lightGrayFill : #e6e6e6;
+$darkGrayFill : #a0a0a0;
+$background-gray : #f5f5f5;
+$veryLightGrayFill : #f5f5f5;
+$black : #000;
+$white : #fff;
+$orange : #f4a806;
+$label-gray : #666;
+$title-gray : #9e9e9e;
+$top-background-gray: #f4f2ef;
+
+:export {
+	blue: $blue;
+	red: $red;
+	lightGrayFill: $lightGrayFill;
+	darkGrayFill: $darkGrayFill;
+	veryLightGrayFill: $veryLightGrayFill;
+	black: $black;
+	// $white : #fff;
+	// $orange : #f4a806;
+	// $label-gray : #666;
+	// $title-gray : #9e9e9e;
+}

@@ -1,0 +1,301 @@
+@import "colors.scss";
+
+#share-modal #share-saved .short-url,
+#share-modal #share-embed textarea {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.1ex;
+}
+
+.open-share.modal .circular-loader {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.1s linear;
+}
+
+.open-share.modal .circular-loader .loader-path {
+  stroke: $blue;
+  stroke-dasharray: 120;
+  animation: dash 1.5s linear 0s infinite;
+  animation-fill-mode: both;
+  stroke-linecap: round;
+  transform-origin: center center;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 120;
+  }
+  50% {
+    stroke-dashoffset: 30;
+    transform: rotate(240deg);
+  }
+  100% {
+    stroke-dashoffset: 120;
+    transform: rotate(720deg);
+  }
+}
+
+#share-modal .share-footer {
+  color: $label-gray;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 60px;
+}
+
+#share-modal .share-footer > div {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  #share-modal .share-footer {
+    display: none;
+  }
+}
+
+#share-modal #share-embed {
+  display: none;
+  padding: 50px 0;
+  color: $label-gray;
+}
+
+#share-modal #share-embed h3 {
+  font-weight: 400;
+}
+
+#share-modal #share-embed .expandable-inner {
+  text-align: left;
+}
+
+#share-modal #share-embed textarea {
+  border: 2px $background-gray solid;
+  width: 100%;
+  height: 110px;
+  padding: 15px;
+  color: $label-gray;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 450px;
+}
+
+#share-modal #share-embed p {
+  font-size: 18px;
+}
+
+#share-modal #share-saved {
+  padding: 100px 0;
+  color: $label-gray;
+}
+
+#share-modal #share-saved .short-url {
+  color: $label-gray;
+  font-size: 32px;
+  width: 500px;
+  padding: 36px 48px;
+  text-align: center;
+  border: 2px $background-gray solid;
+}
+
+@media (max-width: 767px) {
+  #share-modal #share-saved .short-url {
+    font-size: 18px;
+    line-height: 32px;
+    padding: 10px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#share-modal.show-embed #share-embed {
+  display: block;
+}
+
+#share-modal.show-embed #toggle-share-embed span {
+  transform: rotate(180deg);
+}
+
+#share-modal .saved-text {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+  #share-modal .saved-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+#share-modal #copy-link {
+  color: $blue;
+  font-size: 24px;
+  display: block;
+  margin: 15px auto 37px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  #share-modal #copy-link {
+    font-size: 18px;
+  }
+}
+
+#share-modal #share-facebook {
+  margin-right: 30px;
+}
+
+#share-modal #share-facebook:before {
+  background-image: url(/images/icon-round-facebook.svg);
+}
+
+#share-modal #share-facebook:after {
+  content: 'Facebook';
+}
+
+@media (max-width: 767px) {
+  #share-modal #share-facebook {
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+}
+
+#share-modal #share-twitter:before {
+  background-image: url(/images/icon-round-twitter.svg);
+}
+
+#share-modal #share-twitter:after {
+  content: 'Twitter';
+}
+
+@media (max-width: 767px) {
+  #share-modal #share-twitter {
+    margin-top: 20px;
+  }
+}
+
+#share-modal #toggle-share-embed span {
+  background: url(/images/icon-down-caret.svg) no-repeat right center;
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  top: -2px;
+  position: relative;
+  margin-left: 8px;
+}
+
+@media (max-width: 767px) {
+  #share-modal #toggle-share-embed span {
+    top: -2px;
+    margin-left: 8px;
+  }
+}
+
+#share-modal #iframe-code {
+  width: 450px;
+}
+
+@media (max-width: 767px) {
+  #share-modal #iframe-code {
+    width: auto;
+  }
+}
+
+#share-modal #copy-iframe {
+  color: $blue;
+  cursor: pointer;
+}
+
+#share-modal .share-center {
+  font-size: 18px;
+  letter-spacing: 0;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.open-share.modal {
+  background: transparent;
+  transition: background-color 0.3s;
+}
+
+.open-share.modal .saved-circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: 28px;
+  right: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+  .open-share.modal .saved-circle {
+    width: 60px;
+    height: 60px;
+    bottom: 34px;
+    right: 21px;
+  }
+}
+
+@media (max-width: 767px) {
+  .open-share.modal .saved-circle {
+    width: 54px;
+    bottom: 18px;
+    height: 54px;
+    left: 78.5vw;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 495px) {
+  .open-share.modal .saved-circle {
+    bottom: 11px;
+    left: 70vw;
+  }
+}
+
+.open-share.modal #cancel {
+  display: none;
+}
+
+.open-share.modal #share-modal {
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .open-share.modal.bottom-expanded .saved-circle {
+    bottom: 79px;
+  }
+}
+
+.open-share.modal.data-loaded {
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.open-share.modal.data-loaded .saved-circle {
+  display: none;
+}
+
+.open-share.modal.data-loaded #share-modal {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.open-share.modal.data-loaded #cancel {
+  display: block;
+}
+
+body.touch-device #share-modal .share-footer {
+  display: none;
+}

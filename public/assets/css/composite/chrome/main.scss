@@ -1,0 +1,291 @@
+@import "colors.scss";
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 120;
+  }
+  50% {
+    stroke-dashoffset: 30;
+    transform: rotate(240deg);
+  }
+  100% {
+    stroke-dashoffset: 120;
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 120;
+  }
+  50% {
+    stroke-dashoffset: 30;
+    transform: rotate(240deg);
+  }
+  100% {
+    stroke-dashoffset: 120;
+    transform: rotate(720deg);
+  }
+}
+
+.range-cover {
+  overflow: visible;
+}
+
+.range-cover [type=range] {
+  margin: -5px 0 0 0;
+  padding: 0;
+  width: calc(100% + 32px);
+  height: 60px;
+  position: absolute;
+  left: -16px;
+  opacity: 0;
+  top: -12px;
+  cursor: pointer;
+}
+
+.range-cover [type=range],
+.range-cover [type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+@media (max-width: 767px) {
+  .range-cover [type=range] {
+    left: -10px;
+    width: calc(100% + 18px);
+    margin: -5px 0 0 0;
+  }
+}
+
+.range-cover [type=range]::-webkit-slider-runnable-track {
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+  height: 60px;
+  background: $label-gray;
+}
+
+.range-cover [type=range]::-moz-range-track {
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+  height: 60px;
+  background: $label-gray;
+}
+
+.range-cover [type=range]::-ms-track {
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+  height: 60px;
+  background: $label-gray;
+}
+
+.range-cover [type=range]::-webkit-slider-thumb {
+  margin-top: 0px;
+  box-sizing: border-box;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $blue;
+}
+
+.range-cover [type=range]::-moz-range-thumb {
+  box-sizing: border-box;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $blue;
+}
+
+.range-cover [type=range]::-ms-thumb {
+  margin-top: 0;
+  box-sizing: border-box;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $blue;
+}
+
+.range-cover .range-dupe {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 50%;
+  pointer-events: none;
+  background-color: $blue;
+  overflow: visible;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.range-cover .range-dupe::before {
+  position: absolute;
+  right: -16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background: $blue;
+  content: '\a';
+  top: -12px;
+}
+
+.range-cover::before {
+  position: absolute;
+  width: 100%;
+  content: '\a';
+  height: 8px;
+  background: $background-gray;
+  top: 10px;
+  border-radius: 4px;
+  left: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .range-cover {
+    width: 23px;
+    padding-left: 0;
+  }
+
+  .range-cover .range-dupe::before {
+    position: absolute;
+    right: -9px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    top: -5px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+  line-height: 1.89;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body button,
+html button {
+  cursor: pointer;
+  border: none;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body input,
+html input {
+  font-family: 'Quicksand', sans-serif;
+}
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus,
+body:not(.user-is-tabbing) *[tabindex] {
+  outline: none;
+}
+
+body.embed-only #tempo-slider,
+body.embed-only #bottom-right,
+body.embed-only #toplinks,
+body.embed-only #header-back,
+body.embed-only #gamepad,
+body.embed-only #bottom-left button:not(#play-button),
+body.embed-only #bottom-left::after,
+body.embed-only #topbar {
+  display: none;
+}
+
+body.embed-only #grid-container > canvas {
+  pointer-events: none;
+}
+
+body.embed-only #grid-container {
+  height: calc(100% - 51px);
+  top: 0;
+}
+
+@media (max-width: 767px) {
+  body.embed-only #grid-container {
+    height: calc(100% - 51px);
+    top: 0;
+  }
+}
+
+body.embed-only #bottom {
+  height: 51px;
+}
+
+body.embed-only #bottom #bottom-left {
+  width: 80px;
+  left: 30px;
+}
+
+body.embed-only #bottom #bottom-left #play-button {
+  display: inline-block;
+  margin-right: 20px;
+  height: 21px;
+  width: 21px;
+  min-width: 0;
+  padding-top: 21px;
+}
+
+body.embed-only #bottom #bottom-left #play-button.playing:before {
+  // background-image: url(/images/icon-stop-blue.svg);
+}
+
+body.embed-only #bottom #bottom-left #play-button:before {
+  background-color: transparent;
+  // background-image: url(/images/icon-play-blue.svg);
+  background-size: 21px 21px;
+  width: 15px;
+  height: 20px;
+  border-radius: 0;
+}
+
+body.embed-only #bottom #bottom-left #play-button:hover:before {
+  background-color: transparent;
+}
+
+@media (max-width: 767px) {
+  body.embed-only #bottom #bottom-left #play-button {
+    text-indent: 60px;
+    top: 14px;
+    left: 30px;
+  }
+}
+
+body.embed-only #edit-link {
+  position: absolute;
+  bottom: 13px;
+  right: 30px;
+  color: $blue;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.67px;
+}
+
+body.embed-only #edit-link::before {
+  content: '\a';
+  position: relative;
+  margin-right: 10px;
+  // background-image: url(/images/icon-edit.svg);
+  height: 14px;
+  width: 14px;
+  display: inline-block;
+}

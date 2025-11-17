@@ -1,0 +1,109 @@
+@import "colors.scss";
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 120;
+  }
+  50% {
+    stroke-dashoffset: 30;
+    transform: rotate(240deg);
+  }
+  100% {
+    stroke-dashoffset: 120;
+    transform: rotate(720deg);
+  }
+}
+
+#gamepad {
+  position: absolute;
+  height: 48px;
+  padding: 7px 9px;
+  border-radius: 24px;
+  z-index: 1;
+  left: 65px;
+  top: 14px;
+}
+
+#gamepad .button {
+  height: 34px;
+  width: 34px;
+  padding-top: 34px;
+  overflow: hidden;
+  display: none;
+  background: transparent;
+  position: relative;
+  margin-left: 9px;
+  float: left;
+}
+
+#gamepad .button:before {
+  background-image: url(/images/gamepad/left.svg);
+  content: '\a';
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  display: block;
+  top: 1px;
+  left: 1px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#gamepad::before {
+  content: '\a';
+}
+
+#gamepad #gamepad-toggle-button {
+  display: inline-block;
+  margin-left: 0;
+}
+
+#gamepad #gamepad-toggle-button::before {
+  background-image: url(/images/icon-gamepad.svg);
+  background-size: 83%;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+#gamepad #gamepad-up-button::before {
+  background-image: url(/images/gamepad/up.svg);
+}
+
+#gamepad #gamepad-down-button::before {
+  background-image: url(/images/gamepad/down.svg);
+}
+
+#gamepad #gamepad-right-button::before {
+  background-image: url(/images/gamepad/right.svg);
+}
+
+#gamepad #gamepad-return-button {
+  width: 65px;
+}
+
+#gamepad #gamepad-return-button::before {
+  width: 63px;
+  background-image: url(/images/gamepad/return.svg);
+}
+
+#gamepad.expand {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.03);
+}
+
+#gamepad.expand .button {
+  display: inline-block;
+}
+
+#gamepad.expand #gamepad-toggle-button::before {
+  background-image: url(/images/icon-x.svg);
+  background-size: 67%;
+  border: 1px transparent solid;
+}
+
+@media (max-width: 767px) {
+  #gamepad {
+    display: none;
+  }
+}

@@ -1,0 +1,360 @@
+.wave-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+/* wave-anim */
+.wave-anim {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(
+    60deg,
+    rgb(220, 210, 255) 0%,
+    rgb(210, 249, 255) 100%
+  );
+  color: white;
+}
+
+.inner-wave-anim {
+  display: flex;
+  padding-top: 15vh;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 100%;
+}
+
+.logo {
+  width: 50px;
+  fill: white;
+  margin-right: 15px;
+}
+
+/* Waves */
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  min-height: 100px;
+  max-height: 150px;
+  margin-bottom: -7px; /* fix safari gap */
+}
+
+/* Content below waves */
+.content_blank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background: #fff;
+  text-align: center;
+}
+
+/* Parallax animation */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content_blank {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+/* Modern select for time signature */
+.modern-select {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.modern-select:focus {
+  border: 1.5px solid #0074d9;
+  outline: none;
+  box-shadow: 0 0 0 2px #e0f0ff;
+}
+
+.tempo-term-label {
+  display: inline-block;
+  border: 1.5px solid #222;
+  border-radius: 4px;
+  background: #fff;
+  padding: 6px 18px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+/* Reset Context Menu */
+.reset-context-menu {
+  position: fixed;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 200px;
+  z-index: 1000;
+  animation: menuFadeIn 0.2s ease;
+}
+
+.menu-item {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #333;
+  font-size: 14px;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
+  color: #00a3ff;
+}
+
+@keyframes menuFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Reset Confirmation Dialog */
+.reset-confirm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 300px;
+  animation: dialogFadeIn 0.3s ease;
+}
+
+.reset-confirm h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.reset-confirm p {
+  margin: 0 0 20px 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.reset-confirm-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.reset-confirm-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.reset-confirm-cancel {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.reset-confirm-ok {
+  background: #00a3ff;
+  color: white;
+}
+
+.reset-confirm-button:hover {
+  transform: scale(1.05);
+}
+
+.reset-confirm-button:active {
+  transform: scale(0.95);
+}
+
+/* Reset Success Message */
+.reset-success {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 163, 255, 0.9);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: slideUp 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+/* Reset Wave Animation */
+.reset-wave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 163, 255, 0.2) 0%,
+    rgba(0, 163, 255, 0) 70%
+  );
+  border-radius: 50%;
+  animation: resetWave 0.8s ease-out;
+  pointer-events: none;
+}
+
+/* Grid Reset Animation */
+.grid-ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 163, 255, 0.2) 0%,
+    rgba(0, 163, 255, 0) 70%
+  );
+  z-index: 1;
+  pointer-events: none;
+  animation: gridRipple 0.8s ease-out;
+}
+
+@keyframes dialogFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes resetWave {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes gridRipple {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Undo/Redo Tooltip */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+[data-tooltip]:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Reset Button States */
+.circular-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.circular-btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
