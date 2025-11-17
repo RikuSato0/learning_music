@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <base href="/assets/songmaker/" />
+  <title>Chrome Music Lab - Song Maker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chrome Music Lab - Song Maker" />
+  <meta name="twitter:description"
+    content="Song Maker, an experiment in Chrome Music Lab, is a simple way for anyone to make and share a song." />
+  <meta name="og:url" content="https://musiclab.chromeexperiments.com" />
+  <meta name="og:title" content="Chrome Music Lab - Song Maker" />
+  <meta name="twitter:image" content="https://musiclab.chromeexperiments.com/Song-Maker/client/images/song-maker.jpg" />
+  <meta name="og:description"
+    content="Song Maker, an experiment in Chrome Music Lab, is a simple way for anyone to make and share a song." />
+  <meta name="description"
+    content="Song Maker, an experiment in Chrome Music Lab, is a simple way for anyone to make and share a song." />
+  <meta name="og:image" content="https://musiclab.chromeexperiments.com/Song-Maker/client/images/song-maker.jpg" />
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400" rel="stylesheet" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-W6L7FL3");
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Cookie Consent CSS -->
+  <link href="https://www.gstatic.com/glue/cookienotificationbar/cookienotificationbar.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="incompatible" style="display: none; text-align: center">
+    <div class="wrapper" style="padding: 20px">
+      <img src="images/page-incompatible.svg" />
+      <p>Oops, sorry for the tech trouble.</p>
+      <p>For best experience,<br />view in Chrome browser.</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var fallbackEl = document.getElementById("incompatible");
+    if (!(window.AudioContext || window.webkitAudioContext)) {
+      fallbackEl.style.display = "flex";
+    }
+  </script>
+
+  <script src="/assets/js/songmaker/Main.js" charset="utf-8"></script>
+
+  <!-- Cookie Consent JS -->
+  <script src="https://www.gstatic.com/glue/cookienotificationbar/cookienotificationbar.min.js"
+    data-glue-cookie-notification-bar-category="2B"></script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Song Maker</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+    </script>
+    <link
+      href="https://www.gstatic.com/glue/cookienotificationbar/cookienotificationbar.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="/assets/css/composite/build.css" rel="stylesheet" />
+    <link href="/assets/css/composite/composite.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="assets/favico.png" type="image/x-icon" />
+    <link rel="canonical" href="" />
+
+    <link rel="icon" sizes="192x192" href="assets/icon.png" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@4.2.2/build/cjs/vexflow.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <button class="nav-btn" onclick="location.href='/'">← Back</button>
+      <span class="nav-title">Song Maker</span>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 20px;
+        "
+      >
+        <button class="nav-btn" onclick="location.href='/metronome/help'">
+          Help
+        </button>
+      </div>
+    </nav>
+    <div style="display: flex; width: 100%;">
+      <div class="wave-back">
+        <div class="wave-anim">
+          <div class="inner-wave-anim"></div>
+
+          <!-- Waves SVG -->
+          <div>
+            <svg
+              class="waves"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 24 150 28"
+              preserveAspectRatio="none"
+            >
+              <defs>
+                <path
+                  id="gentle-wave"
+                  d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18
+                     58 18 88 18 v44h-352z"
+                />
+              </defs>
+              <g class="parallax">
+                <use
+                  xlink:href="#gentle-wave"
+                  x="48"
+                  y="0"
+                  fill="rgba(255,255,255,0.7)"
+                />
+                <use
+                  xlink:href="#gentle-wave"
+                  x="48"
+                  y="3"
+                  fill="rgba(255,255,255,0.5)"
+                />
+                <use
+                  xlink:href="#gentle-wave"
+                  x="48"
+                  y="5"
+                  fill="rgba(255,255,255,0.3)"
+                />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="music-sheet" style="display: flex; align-items: center; gap: 16px;">
+        <div id="notation"></div>
+        <!-- Time Signature Dropdown -->
+        <div style="margin-left: 16px;">
+          <label for="time-signature" style="font-weight: bold;">Time Signature:</label>
+          <select id="time-signature" class="modern-select" style="padding: 8px 16px; border-radius: 8px; font-size: 1.1em; border: 1px solid #ccc; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <option value="4/4">4/4</option>
+            <option value="3/4">3/4</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Add progress bar container -->
+      <div class="progress-container" style="width: 100%; height: 4px; background: #eee; margin: 10px 0; border-radius: 2px; overflow: hidden;">
+        <div id="playback-progress" style="width: 0%; height: 100%; background: linear-gradient(90deg, #0074d9, #7fdbff); transition: width 0.1s linear;"></div>
+      </div>
+
+      <div class="adjust-area" style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%;">
+        <!-- Tempo Italian Label above the slider -->
+        <div style="width: 100%; display: flex; justify-content: center;">
+          <span id="tempo-italian" class="tempo-term-label">Allegro</span>
+        </div>
+        <!-- Tempo slider and BPM display -->
+        <div style="display: flex; align-items: center; gap: 12px; width: 100%; justify-content: center; margin-bottom: 8px;">
+          <label for="tempo-slider" style="font-weight: 500; color: #888;">Tempo</label>
+          <input id="tempo-slider" type="range" min="40" max="208" value="120" style="width: 200px;">
+          <span id="bpm-value" style="font-size: 1.1em; color: #0074d9; margin-left: 4px;">120</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 24px; width: 100%; justify-content: center;">
+          <button id="play-button" class="circular-btn" style="width: 40px; height: 40px; border-radius: 50%; background: #00A3FF; color: white; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0;">
+            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <polygon points="5,3 19,12 5,21"/>
+            </svg>
+            <svg class="pause-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display: none;">
+              <rect x="6" y="4" width="4" height="16"/>
+              <rect x="14" y="4" width="4" height="16"/>
+            </svg>
+          </button>
+          <button id="reset-button" class="circular-btn" style="width: 40px; height: 40px; border-radius: 50%; background: #00A3FF; color: white; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+              <path d="M3 3v5h5"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="note-container">
+        <div class="note-group" id="noteGroup"></div>
+      </div>
+      <!-- Dynamic Markings UI -->
+      <div id="dynamic-markings-container" style="display: flex; flex-direction: row; align-items: center; gap: 16px;">
+        <div class="dynamics-label" style="font-size: 1.2em; font-weight: 500; color: #2c3e50; letter-spacing: 0.5px;">
+          Dynamics
+        </div>
+        <div class="dynamics-controls" style="display: flex; align-items: center; gap: 20px; background: rgba(255, 255, 255, 0.9); padding: 16px 24px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+          <select id="dynamic-markings" class="dynamic-select" style="appearance: none; padding: 8px 35px 8px 15px; font-size: 1.1em; border: 2px solid #e0e7ff; border-radius: 8px; background: white url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%236366f1\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 9l6 6 6-6\"/></svg>') no-repeat right 12px center; background-size: 12px; cursor: pointer; color: #4f46e5; font-weight: 500; transition: all 0.3s ease;">
+            <option value="">None</option>
+            <option value="pp">pp</option>
+            <option value="p">p</option>
+            <option value="mp">mp</option>
+            <option value="mf">mf</option>
+            <option value="f">f</option>
+            <option value="ff">ff</option>
+          </select>
+          <div class="dynamics-display" style="display: flex; align-items: center; gap: 12px;">
+            <span id="dynamic-marking-display" style="font-size: 1.4em; font-weight: 600; color: #4f46e5; min-width: 40px; text-align: center; font-style: italic;"></span>
+            <div class="dynamics-info" style="font-size: 0.9em; color: #6b7280;">
+              <span class="dynamics-term"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="http://unpkg.com/tone"></script>
+    <script
+      src="/assets/js/composite/data/SongOptions.js"
+      type="module"
+    ></script>
+    <script src="/assets/js/composite/composite.js" type="module"></script>
+  </body>
+</html>
