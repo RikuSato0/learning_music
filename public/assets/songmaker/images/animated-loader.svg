@@ -1,0 +1,237 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 553 350.87"
+  style="transform-box: fill-box;">
+  <style>
+
+    .hand {
+      animation: handMove 2.5s linear forwards infinite;
+      transform-box: fill-box;
+    }
+
+    .box {
+      opacity: 0;
+    }
+
+    .box.red {
+      animation: redBoxAppear 2.5s linear forwards infinite;
+    }
+
+    .box.orange {
+      animation: orangeBoxAppear 2.5s linear forwards infinite;
+    }
+
+    .box.yellow {
+      animation: yellowBoxAppear 2.5s linear forwards infinite;
+    }
+
+    .box.green {
+      animation: greenBoxAppear 2.5s linear forwards infinite;
+    }
+
+    .box.blue {
+      animation: blueBoxAppear 2.5s linear forwards infinite;
+    }
+
+    .box.purple {
+      animation: purpleBoxAppear 2.5s linear forwards infinite;
+    }
+
+    @keyframes redBoxAppear {
+      0% {
+        opacity: 0;
+      }
+
+      21.5% {
+        opacity: 0;
+      }
+
+      22% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes orangeBoxAppear {
+      0% {
+        opacity: 0;
+      }
+
+      28.5% {
+        opacity: 0;
+      }
+
+      29% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes yellowBoxAppear {
+      0% {
+        opacity: 0;
+      }
+
+      35% {
+        opacity: 0;
+      }
+
+      36% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes greenBoxAppear {
+      0% {
+        opacity: 0;
+      }
+
+      44% {
+        opacity: 0;
+      }
+
+      45% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes blueBoxAppear {
+      0% {
+        opacity: 0;
+      }
+
+      52% {
+        opacity: 0;
+      }
+
+      53% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes purpleBoxAppear {
+      0% {
+        opacity: 0;
+      }
+
+      59% {
+        opacity: 0;
+      }
+
+      59.5% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes handMove {
+      0% {
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+      }
+
+      10% {
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+      }
+
+      15% {
+        transform: translate3d(30%, 50%, 0);
+        -webkit-transform: translate3d(30%, 50%, 0);
+      }
+
+      60% {
+        transform: translate3d(550%, -200%, 0);
+        -webkit-transform: translate3d(550%, -200%, 0);
+      }
+
+      80% {
+        transform: translate3d(550%, -200%, 0);
+        -webkit-transform: translate3d(550%, -200%, 0);
+      }
+
+      100% {
+        transform: translate3d(550%, -200%, 0);
+        -webkit-transform: translate3d(550%, -200%, 0);
+      }
+    }
+
+  </style>
+  <rect class="box red" x="97.55" y="208.42" width="58.62" height="34.61" transform="translate(253.73 451.45) rotate(180)" style="fill:#e33059"/>
+  <rect class="box orange" x="156.18" y="173.75" width="58.62" height="34.61" transform="translate(370.97 382.11) rotate(180)" style="fill:#f7943d"/>
+  <rect class="box yellow" x="214.8" y="139.08" width="58.62" height="34.61" transform="translate(488.22 312.77) rotate(180)" style="fill:#edd929"/>
+  <rect class="box green" x="273.42" y="104.41" width="58.62" height="34.61" transform="translate(605.46 243.43) rotate(180)" style="fill:#95c631"/>
+  <rect class="box blue" x="332.04" y="69.74" width="58.62" height="34.61" transform="translate(722.7 174.09) rotate(180)" style="fill:#11826d"/>
+  <rect class="box purple" x="390.66" y="35.07" width="58.62" height="34.61" transform="translate(839.94 104.75) rotate(180)" style="fill:#5b37cc"/>
+  <g class="grid" style="opacity:0.5">
+    <line x1="97.55" y1="274.13" x2="97.55" y2="0.56" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="66.17" y1="35.07" x2="487.22" y2="35.07" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="66.17" y1="69.74" x2="487.22" y2="69.74" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="66.17" y1="104.41" x2="487.22" y2="104.41" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="66.17" y1="139.08" x2="487.22" y2="139.08" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="66.17" y1="173.75" x2="487.22" y2="173.75" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="66.17" y1="208.42" x2="487.22" y2="208.42" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="214.8" y1="274.13" x2="214.8" y2="0.56" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="332.04" y1="274.13" x2="332.04" y2="0.56" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="449.28" y1="274.13" x2="449.28" y2="0.56" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="156.18" y1="274.13" x2="156.18" y2="0.56" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="273.42" y1="274.13" x2="273.42" y2="0.56" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="390.66" y1="274.13" x2="390.66" y2="0.56" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+    <line x1="66.17" y1="243.09" x2="487.22" y2="243.09" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.12158125638962px"/>
+  </g>
+  <g class="hand">
+  <path
+    d="M16.6,305.2l-13.1-23c-2.3-3.2-1.7-7.6,1.2-10.1l0,0c3.2-2.8,8-2.5,10.8,0.7l3.9,4.4v-45
+  		c0-3.6,2.9-6.5,6.5-6.5l0,0c3.6,0,6.5,2.9,6.5,6.5v34.3v-14.6c0-4,3.2-7.2,7.2-7.2l0,0c4,0,7.2,3.2,7.2,7.2v14.6v-9.8
+  		c0-3.7,3-6.6,6.6-6.6l0,0c3.7,0,6.6,3,6.6,6.6v11v-5.9c0-3.6,2.9-6.5,6.5-6.5l0,0c3.6,0,6.5,2.9,6.5,6.5v26.7
+  		c0,0,0.1,21.6-15.5,21.6"
+    style="fill:#fff;stroke:#757575;stroke-linecap:round;stroke-linejoin:round;stroke-width:3.43427842855454px"/>
+  <path fill="white" d="M46.5,314.5H29.7c-5.8,0-10.5-4.7-10.5-10.5v-2c0-5.8,4.7-10.5,10.5-10.5h16.8c5.8,0,10.5,4.7,10.5,10.5v2
+  C57,309.8,52.3,314.5,46.5,314.5z"/>
+  </g>
+</svg>

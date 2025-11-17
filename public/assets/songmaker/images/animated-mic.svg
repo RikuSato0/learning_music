@@ -1,0 +1,248 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="-50 0 650.04 233.15"
+  style="transform-box: fill-box; overflow: visible; transform-origin: 50% 50%;">
+  <style>
+
+    .box {
+      opacity: 0;
+    }
+
+    .box.red {
+      animation: redBoxAppear 3s linear forwards infinite;
+    }
+
+    .box.orange {
+      animation: orangeBoxAppear 3s linear forwards infinite;
+    }
+
+    .box.yellow {
+      animation: yellowBoxAppear 3s linear forwards infinite;
+    }
+
+    .guide {
+      animation: guideSlide 3s linear forwards infinite;
+      transform-box: fill-box;
+      transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+    }
+
+    .ring {
+      animation: pulse 3s linear forwards infinite;
+      transform-origin: 50% 50%;
+      transform-box: fill-box;
+    }
+
+    @keyframes guideSlide {
+      0% {
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+      }
+
+      20% {
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+      }
+
+      20.5% {
+        transform: translate3d(200%, 0, 0);
+        -webkit-transform: translate3d(100%, 0, 0);
+      }
+
+      35% {
+        transform: translate3d(200%, 0, 0);
+        -webkit-transform: translate3d(100%, 0, 0);
+      }
+
+      35.5% {
+        transform: translate3d(200%, 0, 0);
+        -webkit-transform: translate3d(200%, 0, 0);
+      }
+
+      51% {
+        transform: translate3d(200%, 0, 0);
+        -webkit-transform: translate3d(200%, 0, 0);
+      }
+
+      51.5% {
+        transform: translate3d(300%, 0, 0);
+        -webkit-transform: translate3d(300%, 0, 0);
+      }
+
+      99.5% {
+        transform: translate3d(300%, 0, 0);
+        -webkit-transform: translate3d(300%, 0, 0);
+      }
+
+      100% {
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes redBoxAppear {
+      0% {
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0;
+      }
+
+      21% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes orangeBoxAppear {
+      0% {
+        opacity: 0;
+      }
+
+      35% {
+        opacity: 0;
+      }
+
+      36% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes yellowBoxAppear {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      51% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+
+      18% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+
+      22% {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+      }
+
+      25% {
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+      }
+
+      28% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+
+      33% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+
+      35% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+      }
+
+      42% {
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+      }
+
+      43% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+
+      52% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+
+      54% {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+      }
+
+      58% {
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+      }
+
+      60% {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+      }
+
+      65% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+    }
+
+  </style>
+  <g class="boxes">
+    <rect class="guide" x="199.95" y="0.6" width="71.53" height="231.95" style="fill:#16a8f0;opacity:0.2"/>
+    <rect class="box red" x="199.95" y="160.37" width="71.53" height="42.24" transform="translate(471.43 362.97) rotate(180)" style="fill:#e33059"/>
+    <rect class="box orange" x="271.48" y="118.06" width="71.53" height="42.24" transform="translate(614.49 278.36) rotate(180)" style="fill:#f7943d"/>
+    <rect class="box yellow" x="343.01" y="75.76" width="71.53" height="42.24" transform="translate(757.55 193.75) rotate(180)" style="fill:#edd929"/>
+  </g>
+  <g style="opacity:0.5">
+    <line x1="199.95" y1="232.55" x2="199.95" y2="0.6" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2000000000000002px"/>
+    <line x1="165.31" y1="33.45" x2="523.44" y2="33.45" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2000000000000002px"/>
+    <line x1="165.31" y1="75.76" x2="523.44" y2="75.76" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2000000000000002px"/>
+    <line x1="165.31" y1="118.06" x2="523.44" y2="118.06" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2000000000000002px"/>
+    <line x1="165.31" y1="160.37" x2="523.44" y2="160.37" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2000000000000002px"/>
+    <line x1="343.01" y1="232.55" x2="343.01" y2="0.6" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2000000000000002px"/>
+    <line x1="486.07" y1="232.55" x2="486.07" y2="0.6" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2000000000000002px"/>
+    <line x1="271.48" y1="232.55" x2="271.48" y2="0.6" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2000000000000002px"/>
+    <line x1="414.54" y1="232.55" x2="414.54" y2="0.6" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2000000000000002px"/>
+    <line x1="165.31" y1="202.67" x2="523.44" y2="202.67" style="fill:none;stroke:#16a8f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2000000000000002px"/>
+  </g>
+  <line x1="54.75" y1="143.84" x2="54.75" y2="110.49" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:1.2000000000000002px"/>
+  <circle class="ring" cx="57.44" cy="127.17" r="55.94" style="fill:none;stroke:#e33059;stroke-miterlimit:10;stroke-width:3px;opacity:0.30000000000000004"/>
+  <path d="M58.72,133a7.06,7.06,0,0,0,7.06-7.08l0-14.16a7.08,7.08,0,1,0-14.16,0v14.16A7.08,7.08,0,0,0,58.72,133Zm12.51-7.08c0,7.08-6,12-12.51,12s-12.5-5-12.5-12h-4c0,8,6.42,14.7,14.16,15.85v7.74h4.72v-7.74c7.74-1.13,14.16-7.78,14.16-15.85Z" style="fill:#e33059"/>
+</svg>

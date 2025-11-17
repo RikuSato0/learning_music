@@ -1,0 +1,16 @@
+
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+	<desc>Created with Sketch.</desc>
+	<defs></defs>
+	<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="Mic-Reversed">
+			<g id="ic_mic" transform="translate(15.000000, 16.250000)">
+				<g id="Icon-24px">
+					<path d="M15,17.5 C17.075,17.5 18.7375,15.825 18.7375,13.75 L18.75,6.25 C18.75,4.175 17.075,2.5 15,2.5 C12.925,2.5 11.25,4.175 11.25,6.25 L11.25,13.75 C11.25,15.825 12.925,17.5 15,17.5 Z M21.625,13.75 C21.625,17.5 18.45,20.125 15,20.125 C11.55,20.125 8.375,17.5 8.375,13.75 L6.25,13.75 C6.25,18.0125 9.65,21.5375 13.75,22.15 L13.75,26.25 L16.25,26.25 L16.25,22.15 C20.35,21.55 23.75,18.025 23.75,13.75 L21.625,13.75 Z" id="Shape" fill="#FF0000" fill-rule="nonzero"></path>
+					<polygon id="Shape" points="0 0 30 0 30 30 0 30"></polygon>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

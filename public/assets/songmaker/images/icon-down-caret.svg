@@ -1,0 +1,16 @@
+<svg width="12px" height="8px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+	<desc>Created with Sketch.</desc>
+	<defs></defs>
+	<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="Caret" transform="translate(-6.000000, -8.000000)">
+			<g id="ic_keyboard_arrow_right" transform="translate(12.000000, 12.000000) rotate(90.000000) translate(-12.000000, -12.000000) ">
+				<g id="Icon-24px">
+					<path d="M8.9427827,15.986447 L13.17,11.75 L8.9427827,7.51355297 C8.747884,7.31822872 8.74805645,7.00194355 8.94316805,6.80683195 L9.64644661,6.10355339 C9.84170876,5.90829124 10.1582912,5.90829124 10.3535534,6.10355339 L15.6464466,11.3964466 C15.8417088,11.5917088 15.8417088,11.9082912 15.6464466,12.1035534 L10.3535534,17.3964466 C10.1582912,17.5917088 9.84170876,17.5917088 9.64644661,17.3964466 L8.94316805,16.693168 C8.74805645,16.4980565 8.747884,16.1817713 8.9427827,15.986447 Z" id="Shape" fill="#666" fill-rule="nonzero"></path>
+					<polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+				</g>
+			</g>
+
+		</g>
+	</g>
+</svg>
